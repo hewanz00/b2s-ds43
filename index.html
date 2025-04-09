@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back to School (づ ◕‿◕ )づ</title>
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+     <!--Link to Skeleton Style Sheet which makes it look nicer-->
+<link
+	rel="stylesheet"
+	href="styles.css"
+	/>
+  </head>
+  <body style="background-color: pink">
+    <h1
+      style="
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+        text-align: center;
+      "
+    >
+      Back to School Embedding Project ๑(◕‿◕)๑
+    </h1>
+    <h2
+      style="
+        color: paleturquoise;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+        font-size: smaller;
+        text-align: center;
+      "
+    >
+      this work was done as part of DS43's second B2S week. <br />
+        enjoy your stay!
+    </h2>
+    <div 
+      class="content"
+    ></div class = "content">
+    
+
+   <!-- buttons 1 -->
+    <fieldset id="first_row_of_buttons"; style="font-family: Verdana, Geneva, Tahoma, sans-serif; color:white; border: none;">
+  <legend>Filter the view! (ᗒᗨᗕ)</legend>
+  <input type="button" value="Oregon and Washington Only" id="oregon_and_washington"; style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: pink;
+  background-color:white " />
+  <input type="button" value="Clear Filter" id="clear_filter"; style="background-color: white; color: pink;" />
+	<input type="button" value="Undo" id="undo"; style="background-color: white; color: pink;" />
+</fieldset>
+
+<!-- buttons 2 -->
+<fieldset id="second_row_of_buttons"; style="font-family: Verdana, Geneva, Tahoma, sans-serif; color:white; border: none;">
+  <legend>Filter cities for a range of values! ꒰(･‿･)꒱</legend>
+  <input type="number" placeholder="min value" id="minValue"; style="color: pink;"/>
+  <input type="number" placeholder="max value" id="maxValue" />
+	<input type="button" value="Filter Range" id="filter_range";style="font-family: Verdana, Geneva, Tahoma, sans-serif;" style="color: pink; background-color: white;" />
+</fieldset>
+
+    <!-- this is where we will put tableau dashboard :3 -->
+
+
+<div id="hewan">
+
+    
+    <tableau-viz
+      id="tableauViz"
+      src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview"
+      toolbar="bottom"
+      height="100vh"
+      width="100vw"
+    >
+    </tableau-viz>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
